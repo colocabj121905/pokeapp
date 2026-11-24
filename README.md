@@ -127,4 +127,4 @@ La aplicación revisa esa propiedad con `isAdmin()`. Si vale `true`, permite abr
 
 ---
 
-Proyecto realizado como trabajo práctico de desarrollo web.
+
