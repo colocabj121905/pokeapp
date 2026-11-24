@@ -1,0 +1,11 @@
+import {initialPokemon,initialUsers} from './data.js';
+const keys={pokemon:'pokeapp_pokemon_kalos_v5',users:'pokeapp_users',session:'pokeapp_session'};
+const read=(key,fallback)=>JSON.parse(localStorage.getItem(key))||fallback;
+const save=(key,data)=>localStorage.setItem(key,JSON.stringify(data));
+export const getPokemon=()=>read(keys.pokemon,initialPokemon);
+export const savePokemon=data=>save(keys.pokemon,data);
+export const getUsers=()=>read(keys.users,initialUsers);
+export const saveUsers=data=>save(keys.users,data);
+export const getSession=()=>read(keys.session,null);
+export const saveSession=user=>save(keys.session,user);
+export const clearSession=()=>localStorage.removeItem(keys.session);

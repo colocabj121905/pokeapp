@@ -1,0 +1,83 @@
+/* Ajustes visuales personales de Facundo Felipe */
+.brand,
+.hero h1,
+.section-title,
+.card h3,
+.detail h1 {
+  font-family: "Bungee", sans-serif !important;
+  letter-spacing: .3px;
+}
+
+.brand { font-size: 17px; }
+
+.monogram {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+  font: 15px/1 "Bungee", sans-serif;
+  letter-spacing: -2px;
+  text-shadow: 1px 1px 0 #192b63;
+  box-shadow: 0 0 0 3px #15151a, 0 0 0 4px var(--gold);
+}
+
+.topbar #session-zone { margin-left: 4px; }
+
+.sound-toggle {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #555;
+  border-radius: 50%;
+  background: #24242b;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.sound-toggle:hover { border-color: var(--red); color: var(--red); }
+
+/* Fondos por tipo de Pokémon */
+.type-grass { background: radial-gradient(circle at 18% 92%, #82d46955 0 4%, transparent 22%), radial-gradient(circle at 85% 10%, #b3ed8055 0 3%, transparent 18%), repeating-linear-gradient(125deg, #ffffff08 0 2px, transparent 2px 14px), linear-gradient(145deg, #315f32, #142f1c 65%, #0b1d10) !important; border-color: #6bb75b !important; }
+.type-water { background: radial-gradient(circle at 15% 88%, #97e7ff55 0 4%, transparent 22%), radial-gradient(circle at 84% 12%, #b3f1ff55 0 3%, transparent 18%), repeating-radial-gradient(ellipse at 10% 100%, #ffffff10 0 1px, transparent 1px 13px), linear-gradient(145deg, #2676a8, #173e72 65%, #11244a) !important; border-color: #62b8e6 !important; }
+.type-fire { background: radial-gradient(circle at 16% 88%, #ffb44866 0 4%, transparent 23%), radial-gradient(circle at 88% 12%, #ffdf8855 0 3%, transparent 17%), repeating-linear-gradient(55deg, #ff9d5612 0 2px, transparent 2px 13px), linear-gradient(145deg, #a33d27, #65221d 65%, #321414) !important; border-color: #f07943 !important; }
+.type-electric { background: radial-gradient(circle at 15% 88%, #fff08655 0 4%, transparent 23%), radial-gradient(circle at 86% 13%, #fff9b055 0 3%, transparent 18%), repeating-linear-gradient(112deg, #fff7ae15 0 2px, transparent 2px 12px), linear-gradient(145deg, #9b8125, #635019 65%, #32280f) !important; border-color: #f2d34a !important; }
+.type-poison { background: radial-gradient(circle at 15% 88%, #e3a3ff55 0 4%, transparent 23%), radial-gradient(circle at 86% 13%, #f0b8ff55 0 3%, transparent 18%), repeating-linear-gradient(135deg, #e1a1fa13 0 2px, transparent 2px 13px), linear-gradient(145deg, #713683, #472257 65%, #291432) !important; border-color: #c875df !important; }
+.type-normal { background: radial-gradient(circle at 15% 88%, #eeeeee44 0 4%, transparent 23%), radial-gradient(circle at 86% 13%, #ffffff44 0 3%, transparent 18%), repeating-linear-gradient(135deg, #ffffff0d 0 2px, transparent 2px 13px), linear-gradient(145deg, #545762, #32343d 65%, #1b1c21) !important; border-color: #a3a6b0 !important; }
+
+.detail.type-grass, .detail.type-water, .detail.type-fire, .detail.type-electric, .detail.type-poison, .detail.type-normal { box-shadow: inset 0 0 70px #0004; }
+
+.card[class*="type-"]::after {
+  content: "";
+  position: absolute;
+  inset: auto -24px -28px auto;
+  width: 105px;
+  height: 105px;
+  border: 1px solid #ffffff2a;
+  border-radius: 50%;
+  box-shadow: 0 0 0 13px #ffffff08, 0 0 0 28px #ffffff05;
+  pointer-events: none;
+}
+
+.card[class*="type-"] img { filter: drop-shadow(0 10px 9px #0008); }
+
+@media (max-width: 760px) {
+  .monogram {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .topbar #session-zone {
+    margin-left: auto;
+    margin-right: 42px;
+  }
+
+  .sound-toggle { margin-left: auto; }
+}

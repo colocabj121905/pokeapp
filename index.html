@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokeApp | Tu Pokédex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/personal.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="brand" data-route="home" aria-label="Ir al inicio"><span class="mini-ball"></span> POKE<span>APP</span></button>
+    <nav id="main-nav" aria-label="Navegación principal"></nav>
+    <div class="monogram" title="Facundo Felipe">FF</div>
+    <button id="sound-toggle" class="sound-toggle" aria-label="Activar o desactivar sonido" title="Sonido activado">♫</button>
+    <div id="session-zone"></div>
+  </header>
+  <main id="app" tabindex="-1"></main>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
